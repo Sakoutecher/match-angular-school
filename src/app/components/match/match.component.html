@@ -1,0 +1,32 @@
+<div class="container">
+    <div *ngFor="let elt of matches" class="match">
+        <div class="top">
+            <h4>{{ elt.home_team }}</h4>
+            <span>VS</span>
+            <h4>{{ elt.away_team }}</h4>
+        </div>
+        <div class="middle">
+            <div class="team">
+                <div class="top-mid">
+                    <img [src]="elt.home_team_image" alt="home_team_image">
+                </div>
+                <div class="bottom-mid">
+                    <span class="score">{{ elt.home_team_goals }}</span>
+                </div>
+            </div>
+            <div class="team">
+                <div class="top-mid">
+                    <img [src]="elt.away_team_image" alt="away_team_image">
+                </div>
+                <div class="bottom-mid">
+                    <span class="score">{{ elt.away_team_goals }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <span class="link">
+                {{ elt.video_url }}
+            </span>
+        </div>
+    </div>
+</div>
